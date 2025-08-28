@@ -1,0 +1,59 @@
+/* General layout */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f5f7fa;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e293b;
+  color: #fff;
+  padding: 12px 20px;
+}
+
+.navbar .logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background: #1d4ed8;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #1e293b;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #1e293b;
+  color: white;
+  margin-top: 20px;
+}

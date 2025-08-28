@@ -1,0 +1,179 @@
+.homepage {
+  font-family: Arial, sans-serif;
+}
+
+/* HERO SECTION */
+.hero-container {
+  background: url("/images/bg.jpg") no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.hero-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* dark overlay */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cta-btn {
+  padding: 12px 25px;
+  background: #0056b3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.cta-btn:hover {
+  background: #004494;
+}
+
+/* WHY CHOOSE US (Bigger & Highlighted) */
+.why-choose-us {
+  padding: 100px 50px;
+  background: #f8f9fa;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #222;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.why-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+}
+
+.why-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #0056b3;
+}
+
+.services {
+  padding: 60px 20px;
+  background: #f9fafb;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 3 per row by default */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.service-card .icon {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.service-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* STATS */
+.stats {
+  padding: 60px 20px;
+  text-align: center;
+}
+.stats {
+  padding: 80px 20px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.chart-container {
+  width: 400px;
+  height: 300px;
+}

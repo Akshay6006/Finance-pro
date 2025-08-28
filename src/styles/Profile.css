@@ -1,0 +1,243 @@
+.profile-container {
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Profile Header */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f4f6f9;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #2196F3;
+  object-fit: cover;
+}
+
+.edit-btn {
+  margin-top: 10px;
+  padding: 8px 16px;
+  border: none;
+  background: #2196f3;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.edit-btn:hover {
+  background: #1976d2;
+}
+
+/* Section Title */
+.section-title {
+  margin: 20px 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-card {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  border-left: 5px solid;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+.stat-card h4 {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #555;
+}
+.stat-card p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Activity List */
+.activity-list {
+  list-style: none;
+  padding: 0;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.activity-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+.activity-list li:last-child {
+  border-bottom: none;
+}
+
+/* Settings Buttons */
+.settings-shortcuts {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.settings-shortcuts button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #f4f4f4;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.settings-shortcuts button:hover {
+  background: #ddd;
+}
+
+/* Bank Section */
+.bank-card {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.bank-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+  font-size: 15px;
+}
+.bank-table th, 
+.bank-table td {
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  text-align: center;
+}
+.bank-table th {
+  background: #4f46e5;
+  color: white;
+}
+
+/* Bank Form */
+.bank-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.bank-form input {
+  flex: 1 1 200px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+.bank-form button {
+  background: #22c55e;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.bank-form button:hover {
+  background: #16a34a;
+}
+
+/* Funds */
+.funds-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+.funds-actions button {
+  padding: 10px 15px;
+  background: #2196f3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.funds-actions button:hover {
+  background: #1976d2;
+}
+
+/* Plans */
+.plans {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  z-index: 999; /* FIX */
+}
+.modal-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.modal-content input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+.modal-content button {
+  padding: 8px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.modal-content button:hover {
+  background: #388E3C;
+}
