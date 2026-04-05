@@ -1,70 +1,134 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { AppContext } from "../context/AppContext";
+import AddTransaction from "../components/AddTransaction";
+import Charts from "../components/Charts";
+import Insights from "../components/Insights";
 import "../styles/Dashboard.css";
 
 export default function Dashboard() {
-  // later we can fetch this from Firebase/Auth
-  const userName = "Akshay"; 
+  const { transactions, role } = useContext(AppContext);
 
-  const transactions = [
-    { id: 1, name: "Salary Credit", amount: "+ ₹50,000", date: "Aug 20, 2025" },
-    { id: 2, name: "Grocery Store", amount: "- ₹2,450", date: "Aug 21, 2025" },
-    { id: 3, name: "Stock Investment", amount: "- ₹10,000", date: "Aug 22, 2025" },
-    { id: 4, name: "Freelance Income", amount: "+ ₹8,000", date: "Aug 23, 2025" },
-  ];
+  const [search, setSearch] = useState("");
+  const [filter, setFilter] = useState("all");
+
+  const userName = "Akshay";
+
+  const income = transactions
+    .filter((t) => t.type === "income")
+    .reduce((a, t) => a + t.amount, 0);
+
+  const expense = transactions
+    .filter((t) => t.type === "expense")
+    .reduce((a, t) => a + t.amount, 0);
+
+  const balance = income - expense;
+
+  const filteredTransactions = transactions
+    .filter((t) =>
+      t.category.toLowerCase().includes(search.toLowerCase())
+    )
+    .filter((t) =>
+      filter === "all" ? true : t.type === filter
+    );
 
   return (
     <div className="dashboard-page">
 
-      {/* Welcome Banner */}
       <div className="welcome-banner">
-        <h2>Welcome back, <span>{userName}</span> 👋</h2>
-        <p>Here’s an overview of your finances today.</p>
+        <h2>
+          Welcome back, <span>{userName}</span> 👋
+        </h2>
+        <p>Here’s your financial overview.</p>
       </div>
 
-      {/* Summary Cards */}
       <div className="dashboard-cards">
         <div className="card balance">
           <h3>Total Balance</h3>
-          <p>₹1,25,000</p>
+          <p>₹{balance}</p>
         </div>
+
         <div className="card income">
           <h3>Income</h3>
-          <p>₹58,000</p>
+          <p>₹{income}</p>
         </div>
+
         <div className="card expense">
           <h3>Expenses</h3>
-          <p>₹22,450</p>
-        </div>
-        <div className="card investment">
-          <h3>Investments</h3>
-          <p>₹40,000</p>
+          <p>₹{expense}</p>
         </div>
       </div>
 
-      {/* Recent Transactions */}
+      <div className="charts-section">
+        <Charts />
+      </div>
+
+      <div className="insights-section">
+        <Insights />
+      </div>
+
+      {role === "admin" && (
+        <div className="add-section">
+          <h3>Add Transaction</h3>
+          <AddTransaction />
+        </div>
+      )}
+
+      <div className="filter-bar">
+        <input
+          type="text"
+          placeholder="Search category..."
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+
+        <select
+          value={filter}
+          onChange={(e) => setFilter(e.target.value)}
+        >
+          <option value="all">All</option>
+          <option value="income">Income</option>
+          <option value="expense">Expense</option>
+        </select>
+      </div>
+
       <div className="transactions">
         <h2>Recent Transactions</h2>
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Amount</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {transactions.map((t) => (
-              <tr key={t.id}>
-                <td>{t.name}</td>
-                <td className={t.amount.includes("+") ? "positive" : "negative"}>
-                  {t.amount}
-                </td>
-                <td>{t.date}</td>
+
+        {filteredTransactions.length === 0 ? (
+          <p style={{ padding: "10px" }}>No transactions found</p>
+        ) : (
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Type</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+
+            <tbody>
+              {filteredTransactions.map((t) => (
+                <tr key={t.id}>
+                  <td>{t.date}</td>
+                  <td>{t.category}</td>
+                  <td
+                    className={
+                      t.type === "income"
+                        ? "positive"
+                        : "negative"
+                    }
+                  >
+                    ₹{t.amount}
+                  </td>
+                  <td>{t.type}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
+
     </div>
   );
 }

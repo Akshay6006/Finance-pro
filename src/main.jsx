@@ -1,14 +1,16 @@
-// src/main.jsx
 import React from "react";
-import ReactDOM from "react-dom/client";
+import ReactDOM from "react-dom/client"; // ✅ THIS LINE IS REQUIRED
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
+import { AppProvider } from "./context/AppContext";
 import "./styles/index.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <AppProvider>
+        <App />
+      </AppProvider>
     </BrowserRouter>
   </React.StrictMode>
 );

@@ -35,7 +35,6 @@ export default function HomePage() {
 
   return (
     <div className="homepage">
-      {/* HERO SECTION */}
       <section className="hero-container">
         <div className="hero-content">
           <h1>Take Control of Your Finances</h1>
@@ -44,7 +43,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* WHY CHOOSE US */}
+
       <section className="why-choose-us">
         <h2>Why Choose Us?</h2>
         <div className="why-grid">
@@ -75,7 +74,7 @@ export default function HomePage() {
         </div>
       </section>
 
-{/* SERVICES */}
+
 <section className="services">
   <h2>Our Services</h2>
   <div className="service-grid">
@@ -143,11 +142,11 @@ export default function HomePage() {
 
 
 
-      {/* LIVE STATS */}
+    
       <section className="stats">
         <h2>Live Financial Stats</h2>
         <div className="stats-container">
-          {/* Pie Chart */}
+    
           <div className="chart-container">
             <ResponsiveContainer width="100%" height={300}>
               <PieChart>
@@ -169,7 +168,7 @@ export default function HomePage() {
             </ResponsiveContainer>
           </div>
 
-          {/* Line Chart */}
+      
           <div className="chart-container">
             <ResponsiveContainer width="100%" height={300}>
               <LineChart data={lineData}>

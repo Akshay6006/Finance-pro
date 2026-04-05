@@ -4,15 +4,12 @@ import "../styles/Contact.css";
 const Contact = () => {
   return (
     <div className="contact-page">
-      {/* Header */}
       <header className="contact-header">
         <h1>Contact Us</h1>
         <p>We’d love to hear from you! Reach out with any questions or feedback.</p>
       </header>
 
-      {/* Main Section */}
       <div className="contact-container">
-        {/* Contact Form */}
         <section className="contact-form">
           <h2>Send Us a Message</h2>
           <form>
@@ -23,14 +20,12 @@ const Contact = () => {
           </form>
         </section>
 
-        {/* Contact Info */}
         <section className="contact-info">
           <h2>Get in Touch</h2>
           <p><strong>Email:</strong> support@nyota.com</p>
           <p><strong>Phone:</strong> +91 98765 43210</p>
           <p><strong>Address:</strong> Bangalore, India</p>
 
-          {/* Google Map */}
           <div className="map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.482328081279!2d77.5946!3d12.9716"

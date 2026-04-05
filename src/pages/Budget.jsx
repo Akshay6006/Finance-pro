@@ -14,7 +14,6 @@ import "../styles/Budget.css";
 export default function Budget() {
   const [selectedMonth, setSelectedMonth] = useState("January");
 
-  // Example Budget Data
   const budgetData = [
     { category: "Marketing", planned: 4000, actual: 3500 },
     { category: "Development", planned: 6000, actual: 7000 },
@@ -31,7 +30,6 @@ export default function Budget() {
     <div className="budget-container">
       <h2 className="budget-title">Budget Overview</h2>
 
-      {/* 🔹 Filters */}
       <div className="budget-filters">
         <label>Select Month: </label>
         <select value={selectedMonth} onChange={(e) => setSelectedMonth(e.target.value)}>
@@ -54,7 +52,6 @@ export default function Budget() {
         </button>
       </div>
 
-      {/* 🔹 Summary Numbers */}
       <div className="budget-summary">
         <div className="budget-card">
           <h3>Total Planned</h3>
@@ -73,7 +70,6 @@ export default function Budget() {
         </div>
       </div>
 
-      {/* 🔹 Bar Chart */}
       <div className="budget-chart">
         <h3 className="budget-subtitle">Planned vs Actual by Category</h3>
         <ResponsiveContainer width="100%" height={350}>

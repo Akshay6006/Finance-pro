@@ -10,7 +10,6 @@ export default function Profile() {
     avatar: "https://i.pravatar.cc/150?img=7",
   });
 
-  // Multiple banks
   const [banks, setBanks] = useState([
     { id: 1, bankName: "HDFC Bank", accountNo: "XXXX-1234", ifsc: "HDFC000123" },
   ]);
@@ -33,7 +32,6 @@ export default function Profile() {
   const [showModal, setShowModal] = useState(false);
   const [showBankModal, setShowBankModal] = useState(false);
 
-  // Salary Split Logic
   const salarySplit = {
     savings: 50,
     investments: 30,
@@ -62,7 +60,7 @@ export default function Profile() {
     setStats((prev) => ({
       ...prev,
       balance: prev.balance + amount,
-      savings: prev.savings + amount, // default: goes into savings
+      savings: prev.savings + amount, 
     }));
 
     setActivities([
@@ -71,7 +69,6 @@ export default function Profile() {
     ]);
   };
 
-  // Bank Functions
   const addBank = () => {
     if (!newBank.bankName || !newBank.accountNo || !newBank.ifsc) return;
     setBanks([...banks, { id: Date.now(), ...newBank }]);
@@ -85,7 +82,6 @@ export default function Profile() {
 
   return (
     <div className="profile-container">
-      {/* Profile Header */}
       <div className="profile-header">
         <img src={user.avatar} alt="User Avatar" className="profile-avatar" />
         <div>
@@ -97,7 +93,6 @@ export default function Profile() {
         </div>
       </div>
 
-      {/* Bank Details */}
       <h3 className="section-title">Bank Details</h3>
       {banks.map((bank) => (
         <div key={bank.id} className="bank-card">
@@ -109,7 +104,6 @@ export default function Profile() {
       ))}
       <button className="edit-btn" onClick={() => setShowBankModal(true)}>+ Add New Bank</button>
 
-      {/* Stats */}
       <h3 className="section-title">Account Overview</h3>
       <div className="stats-grid">
         <div className="stat-card" style={{ borderColor: "#4CAF50" }}>
@@ -130,14 +124,12 @@ export default function Profile() {
         </div>
       </div>
 
-      {/* Add Funds */}
       <h3 className="section-title">Funds Management</h3>
       <div className="funds-actions">
         <button onClick={() => addFunds(50000)}>💰 Add Salary ₹50,000</button>
         <button onClick={() => addManualFunds(5000)}>➕ Add Manually ₹5,000</button>
       </div>
 
-      {/* Recent Activity */}
       <h3 className="section-title">Recent Activity</h3>
       <ul className="activity-list">
         {activities.map((a) => (
@@ -148,7 +140,6 @@ export default function Profile() {
         ))}
       </ul>
 
-      {/* Investment Plans */}
       <h3 className="section-title">Investment Plans</h3>
       <div className="plans">
         <p>📈 Mutual Funds – ₹20,000</p>
@@ -157,7 +148,6 @@ export default function Profile() {
         <button className="edit-btn">+ Add New Plan</button>
       </div>
 
-      {/* Profile Edit Modal */}
       {showModal && (
         <div className="modal">
           <div className="modal-content">
@@ -170,7 +160,6 @@ export default function Profile() {
         </div>
       )}
 
-      {/* Add Bank Modal */}
       {showBankModal && (
         <div className="modal">
           <div className="modal-content">

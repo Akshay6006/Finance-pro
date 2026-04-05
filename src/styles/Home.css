@@ -2,7 +2,6 @@
   font-family: Arial, sans-serif;
 }
 
-/* HERO SECTION */
 .hero-container {
   background: url("/images/bg.jpg") no-repeat center center/cover;
   height: 100vh;
@@ -51,7 +50,6 @@
   background: #004494;
 }
 
-/* WHY CHOOSE US (Bigger & Highlighted) */
 .why-choose-us {
   padding: 100px 50px;
   background: #f8f9fa;
@@ -139,7 +137,6 @@
   color: #555;
 }
 
-/* Responsive */
 @media (max-width: 992px) {
   .service-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -153,7 +150,6 @@
 }
 
 
-/* STATS */
 .stats {
   padding: 60px 20px;
   text-align: center;

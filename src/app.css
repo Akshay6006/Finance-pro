@@ -6,7 +6,6 @@ body, html {
   background: #f5f7fa;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -49,7 +48,6 @@ body, html {
   color: #1e293b;
 }
 
-/* Footer */
 .footer {
   text-align: center;
   padding: 15px;

@@ -5,7 +5,6 @@ import "../styles/About.css";
 export default function About() {
   return (
     <div className="about">
-      {/* HERO */}
       <header className="about-hero">
         <div className="about-hero__content">
           <span className="about-hero__badge">All-in-one Personal Finance Hub</span>
@@ -37,7 +36,6 @@ export default function About() {
       </header>
 
       <main className="about-container">
-        {/* TRUST BAR */}
         <section className="trust">
           <p className="trust__title">Trusted finance workflows</p>
           <div className="trust__logos">
@@ -50,7 +48,6 @@ export default function About() {
           <small className="trust__note">*Bank sync will be available when you connect MongoDB-backed integrations.</small>
         </section>
 
-        {/* HOW IT WORKS */}
         <section className="section">
           <h2 className="section__title">How it works</h2>
           <div className="steps">
@@ -77,7 +74,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* CORE FEATURES */}
         <section className="section">
           <h2 className="section__title">What you can do</h2>
           <div className="features">
@@ -129,7 +125,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* DATA FLOW / TRANSPARENCY */}
         <section className="section">
           <h2 className="section__title">Your data, your control</h2>
           <div className="flow">
@@ -150,7 +145,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* SECURITY */}
         <section className="section security">
           <h2 className="section__title">Security & Privacy</h2>
           <div className="security__grid">
@@ -161,7 +155,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* ROADMAP */}
         <section className="section">
           <h2 className="section__title">What’s next</h2>
           <ul className="roadmap">
@@ -172,7 +165,6 @@ export default function About() {
           </ul>
         </section>
 
-        {/* FAQ */}
         <section className="section">
           <h2 className="section__title">FAQ</h2>
           <div className="faq">
@@ -195,7 +187,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* FINAL CTA */}
         <section className="cta">
           <h2>Ready to take control of your money?</h2>
           <p>Create your first budget and set a goal in under 2 minutes.</p>

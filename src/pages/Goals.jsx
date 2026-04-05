@@ -17,7 +17,6 @@ export default function Goals() {
     <div className="goals-container">
       <h1>🎯 Your Goals</h1>
 
-      {/* Active Goals Section */}
       <section className="active-goals">
         <h2>Active Goals</h2>
         <div className="goal-cards">
@@ -37,7 +36,6 @@ export default function Goals() {
         </div>
       </section>
 
-      {/* Completed Goals Section */}
       <section className="completed-goals">
         <h2>✅ Completed Goals</h2>
         <ul>
@@ -49,7 +47,6 @@ export default function Goals() {
         </ul>
       </section>
 
-      {/* Add New Goal */}
       <section className="add-goal">
         <h2>➕ Add New Goal</h2>
         <form>

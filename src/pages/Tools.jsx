@@ -2,30 +2,25 @@ import React, { useState } from "react";
 import "../styles/Tools.css";
 
 export default function Tools() {
-  // States for EMI Calculator
   const [loan, setLoan] = useState("");
   const [rate, setRate] = useState("");
   const [time, setTime] = useState("");
   const [emi, setEmi] = useState(null);
 
-  // States for Savings Calculator
   const [monthly, setMonthly] = useState("");
   const [sRate, setSRate] = useState("");
   const [sTime, setSTime] = useState("");
   const [savings, setSavings] = useState(null);
 
-  // States for Investment Calculator
   const [invest, setInvest] = useState("");
   const [iRate, setIRate] = useState("");
   const [iTime, setITime] = useState("");
   const [future, setFuture] = useState(null);
 
-  // States for Expense Splitter
   const [total, setTotal] = useState("");
   const [people, setPeople] = useState("");
   const [split, setSplit] = useState(null);
 
-  // EMI Calculation
   const calculateEMI = (e) => {
     e.preventDefault();
     const principal = parseFloat(loan);
@@ -42,7 +37,6 @@ export default function Tools() {
     }
   };
 
-  // Savings Calculator
   const calculateSavings = (e) => {
     e.preventDefault();
     const monthlyAmt = parseFloat(monthly);
@@ -60,7 +54,6 @@ export default function Tools() {
     }
   };
 
-  // Investment Calculator
   const calculateInvestment = (e) => {
     e.preventDefault();
     const principal = parseFloat(invest);
@@ -75,7 +68,6 @@ export default function Tools() {
     }
   };
 
-  // Expense Splitter
   const calculateSplit = (e) => {
     e.preventDefault();
     const totalAmt = parseFloat(total);
@@ -96,7 +88,6 @@ export default function Tools() {
         Plan smarter with these quick financial calculators
       </p>
 
-      {/* Grid Layout */}
       <div className="tools-grid">
         {/* EMI Calculator */}
         <div className="tool-card">
@@ -128,7 +119,6 @@ export default function Tools() {
           {emi && <p className="result">Your EMI: ₹{emi}</p>}
         </div>
 
-        {/* Savings Calculator */}
         <div className="tool-card">
           <h2>💳 Savings Calculator</h2>
           <form onSubmit={calculateSavings}>
@@ -158,7 +148,6 @@ export default function Tools() {
           {savings && <p className="result">Your Future Savings: ₹{savings}</p>}
         </div>
 
-        {/* Investment Growth */}
         <div className="tool-card">
           <h2>📈 Investment Growth</h2>
           <form onSubmit={calculateInvestment}>
@@ -188,7 +177,6 @@ export default function Tools() {
           {future && <p className="result">Future Value: ₹{future}</p>}
         </div>
 
-        {/* Expense Splitter */}
         <div className="tool-card">
           <h2>📊 Expense Splitter</h2>
           <form onSubmit={calculateSplit}>

@@ -78,7 +78,6 @@
   overflow: hidden;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .contact-container {
     grid-template-columns: 1fr;

@@ -1,4 +1,3 @@
-// src/App.jsx
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -6,8 +5,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
 
-// Existing pages
-// import Home from "./pages/Home";
+
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
@@ -15,7 +13,6 @@ import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 
-// New pages
 import Reports from "./pages/Reports";
 import Budget from "./pages/Budget";
 import Goals from "./pages/Goals";
@@ -36,7 +33,6 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
 
-          {/* New Pages */}
           <Route path="/reports" element={<Reports />} />
           <Route path="/budget" element={<Budget />} />
           <Route path="/goals" element={<Goals />} />

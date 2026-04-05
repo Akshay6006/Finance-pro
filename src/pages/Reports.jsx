@@ -20,7 +20,6 @@ export default function Reports() {
   const [reportType, setReportType] = useState("weekly");
   const [customDate, setCustomDate] = useState("");
 
-  // Pie Chart Data
   const pieData = [
     { name: "Marketing", value: 400 },
     { name: "Operations", value: 300 },
@@ -29,7 +28,6 @@ export default function Reports() {
   ];
   const COLORS = ["#2563eb", "#10b981", "#f59e0b", "#ef4444"];
 
-  // Line Chart Data
   const lineData = [
     { month: "Jan", expenditure: 400 },
     { month: "Feb", expenditure: 300 },
@@ -39,7 +37,6 @@ export default function Reports() {
     { month: "Jun", expenditure: 650 },
   ];
 
-  // Bar Chart Data
   const barData = [
     { department: "Marketing", revenue: 2400 },
     { department: "Sales", revenue: 1398 },
@@ -48,7 +45,6 @@ export default function Reports() {
     { department: "Operations", revenue: 4800 },
   ];
 
-  // Fake download function
   const handleDownload = () => {
     alert(`Downloading ${reportType} report ${customDate ? "for " + customDate : ""}...`);
   };
@@ -57,7 +53,6 @@ export default function Reports() {
     <div className="reports-container">
       <h2 className="reports-title">Reports & Analytics</h2>
 
-      {/* 🔹 Report Filters */}
       <div className="report-filters">
         <label>Report Type: </label>
         <select value={reportType} onChange={(e) => setReportType(e.target.value)}>
@@ -78,7 +73,6 @@ export default function Reports() {
         </button>
       </div>
 
-      {/* Top Row: Pie + Line */}
       <div className="reports-row">
         <div className="report-card">
           <h3 className="report-subtitle">Expenditure Distribution</h3>
@@ -116,7 +110,6 @@ export default function Reports() {
         </div>
       </div>
 
-      {/* Bottom Row: Bar */}
       <div className="reports-row">
         <div className="report-card full-width">
           <h3 className="report-subtitle">Department Revenue</h3>

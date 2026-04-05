@@ -1,4 +1,4 @@
-/* Container */
+
 .auth-container {
   min-height: 100vh;
   display: flex;
@@ -8,7 +8,7 @@
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Card */
+
 .auth-card {
   background: #fff;
   padding: 2rem;
@@ -19,7 +19,6 @@
   animation: fadeIn 0.6s ease-in-out;
 }
 
-/* Title */
 .auth-title {
   text-align: center;
   font-size: 1.8rem;
@@ -28,14 +27,12 @@
   margin-bottom: 1.5rem;
 }
 
-/* Form */
 .auth-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-/* Input */
 .auth-input {
   padding: 0.8rem;
   border: 1px solid #d1d5db;
@@ -50,7 +47,6 @@
   box-shadow: 0 0 5px rgba(37, 99, 235, 0.4);
 }
 
-/* Button */
 .auth-button {
   background: #2563eb;
   color: white;
@@ -66,7 +62,6 @@
   background: #1e40af;
 }
 
-/* Footer */
 .auth-footer {
   text-align: center;
   margin-top: 1rem;
@@ -84,7 +79,6 @@
   text-decoration: underline;
 }
 
-/* Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
